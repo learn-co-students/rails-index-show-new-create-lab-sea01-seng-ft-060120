@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  # get '/home', to: :"application/home"
+  resources :coupons, only: [:index, :new, :create, :show]
+
+  # get '/coupons/index', to: 'coupons#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

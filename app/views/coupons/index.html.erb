@@ -1,0 +1,11 @@
+<h3>Coupons</h3>
+<% @coupons.each do |coupon| %>
+     <%#= coupon.store %>
+     <%#= link_to coupon.coupon_code, coupon_path(coupon) %>
+     #above passes on its own
+     #below passes w/ the display_coupon method in coupon.rb, which is an instance method in the Coupon class, this allows it to be used on this instance of a coupon 
+     #you call the display_coupon on this coupon and it gives both the store name and coupon code as a string
+     #both options pass the test
+    <%= link_to coupon.display_coupon, coupon_path(coupon) %>
+<% end %>
+
